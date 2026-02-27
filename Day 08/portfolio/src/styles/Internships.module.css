@@ -1,0 +1,116 @@
+.internshipsSection {
+  padding: 100px 20px 40px;
+  position: relative;
+}
+
+.internshipsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timelineContainer {
+  position: relative;
+  max-width: 1000px;
+  margin: 4rem auto 0;
+  padding: 2rem 0;
+}
+
+.timelineContainer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--secondary), transparent);
+  box-shadow: 0 0 15px var(--primary);
+}
+
+.timelineItem {
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  width: 50%;
+  padding-right: 3rem;
+}
+
+.timelineItem:nth-child(even) {
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 3rem;
+}
+
+.timelineMarker {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--dark-bg);
+  border: 4px solid var(--primary);
+  border-radius: 50%;
+  right: -12px;
+  top: 30px;
+  z-index: 2;
+  box-shadow: 0 0 15px var(--primary);
+  transition: all 0.3s ease;
+}
+
+.timelineItem:nth-child(even) .timelineMarker {
+  left: -12px;
+  right: auto;
+  border-color: var(--secondary);
+  box-shadow: 0 0 15px var(--secondary);
+}
+
+.timelineItem:hover .timelineMarker {
+  background: var(--primary);
+  transform: scale(1.3);
+}
+
+.timelineItem:nth-child(even):hover .timelineMarker {
+  background: var(--secondary);
+}
+
+.timelineContent {
+  padding: 2.5rem;
+}
+
+.timelineContent h3 {
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.timelineContent p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .internshipsSection {
+    padding: 80px 20px 40px;
+  }
+
+  .timelineContainer::before {
+    left: 20px;
+  }
+
+  .timelineItem {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 0;
+  }
+
+  .timelineItem:nth-child(even) {
+    padding-left: 60px;
+  }
+
+  .timelineMarker,
+  .timelineItem:nth-child(even) .timelineMarker {
+    left: 8px;
+    right: auto;
+  }
+}

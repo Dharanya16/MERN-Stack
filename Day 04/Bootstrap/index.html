@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dharanya | Bootstrap Portfolio</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+  <!-- Sticky Navbar (position: sticky concept) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm" id="topNav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#hero">Dharanya</a>
+
+      < button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section py-5" id="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold hero-title">
+            Hi, I’m Dharanya 👋
+          </h1>
+
+          <p class="lead hero-text">
+            I am a <b>CSE Engineering Student</b> who loves <i>Web Development</i> and building projects.
+            I am <u>consistent</u>, sometimes I do <s>procrastinate</s>, but I always improve.
+            I believe in <sup>hard work</sup> and <sub>smart learning</sub>.
+            </code>.
+          </p>
+
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#projects" class="btn btn-primary btn-lg btn-hero">View Projects</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg btn-hero">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="col-lg-5 text-center">
+          <img class="img-fluid rounded-4 shadow hero-img"
+               src="https://via.placeholder.com/520x420.png?text=Your+Photo"
+               alt="Profile image of Dharanya">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section class="py-5" id="about">
+    <div class="container">
+      <h2 class="section-title mb-3">About Me</h2>
+
+      <article class="p-4 rounded-4 shadow-sm bg-white">
+        <h3 class="h5 fw-bold">My Learning Journey</h3>
+        <p class="mb-2">
+          I started learning programming with C and Java. Later, I explored HTML, CSS, and Bootstrap.
+          Now I am working on projects in Web Development, Cybersecurity, and Machine Learning.
+        </p>
+
+        <p class="mb-0">
+          My goal is to become a full-stack developer and get placed in a good company.
+        </p>
+      </article>
+
+      <div class="mt-4">
+        <details class="details-box">
+          <summary class="fw-semibold">Click here to know more about me</summary>
+          <p class="mt-2 mb-0">
+            I also like improving communication skills and aptitude daily.
+            I enjoy making notes and learning new tech.
+          </p>
+        </details>
+      </div>
+
+      <!-- Lists -->
+      <div class="row mt-4 g-4">
+        <div class="col-md-6">
+          <h3 class="h5">Technical Skills (Ordered List)</h3>
+          <ol class="list-group list-group-numbered shadow-sm">
+            <li class="list-group-item">HTML</li>
+            <li class="list-group-item">CSS</li>
+            <li class="list-group-item">Java</li>
+            <li class="list-group-item">Python</li>
+          </ol>
+        </div>
+
+        <div class="col-md-6">
+          <h3 class="h5">Hobbies (Unordered List)</h3>
+          <ul class="list-group shadow-sm">
+            <li class="list-group-item">Listening to music</li>
+            <li class="list-group-item">Watching tech videos</li>
+            <li class="list-group-item">Learning new skills</li>
+            <li class="list-group-item">Making notes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="py-5 bg-light" id="projects">
+    <div class="container">
+      <h2 class="section-title mb-4">Projects</h2>
+
+      <!-- Flexbox row (Bootstrap uses flex internally) -->
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card project-card h-100">
+            <img src="https://via.placeholder.com/600x400.png?text=Project+1" class="card-img-top" alt="Project 1 image">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Smart Phishing Detection</h3>
+              <p class="card-text small">
+                Detects suspicious URLs and warns users before they click dangerous links.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card project-card h-100">
+            <img src="https://via.placeholder.com/600x400.png?text=Project+2" class="card-img-top" alt="Project 2 image">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Portfolio Website</h3>
+              <p class="card-text small">
+                A clean responsive portfolio built using HTML, Bootstrap and CSS.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card project-card h-100">
+            <img src="https://via.placeholder.com/600x400.png?text=Project+3" class="card-img-top" alt="Project 3 image">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Student Grade System</h3>
+              <p class="card-text small">
+                Calculates marks and grades using JavaScript functions and conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card project-card h-100">
+            <img src="https://via.placeholder.com/600x400.png?text=Project+4" class="card-img-top" alt="Project 4 image">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">Cyber Awareness Page</h3>
+              <p class="card-text small">
+                A simple educational page about phishing, password safety and secure browsing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Overflow Demo -->
+      <div class="mt-5">
+        <h3 class="h5 mb-3">Overflow Demo (All 4 types)</h3>
+        <div class="row g-3">
+          <div class="col-md-3">
+            <div class="overflow-box visible-box">
+              overflow: visible — This is long text long text long text long text long text long text.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="overflow-box hidden-box">
+              overflow: hidden — This is long text long text long text long text long text long text.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="overflow-box scroll-box">
+              overflow: scroll — This is long text long text long text long text long text long text.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="overflow-box auto-box">
+              overflow: auto — This is long text long text long text long text long text long text.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MEDIA SECTION -->
+  <section class="py-5" id="media">
+    <div class="container">
+      <h2 class="section-title mb-4">Media</h2>
+
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <figure class="p-3 bg-white rounded-4 shadow-sm">
+            <img class="img-fluid rounded-3"
+                 src="https://via.placeholder.com/700x450.png?text=Profile+Image"
+                 alt="Sample profile image of Dharanya">
+            <figcaption class="mt-2 text-muted">
+              Figure 1: My Profile Image (sample)
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-md-6">
+          <figure class="p-3 bg-white rounded-4 shadow-sm">
+            <video controls class="w-100 rounded-3">
+              <source src="intro.mp4" type="video/mp4">
+              Your browser does not support the video tag. Please try another browser.
+            </video>
+            <figcaption class="mt-2 text-muted">
+              Figure 2: My Introduction Video (sample)
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-md-6">
+          <figure class="p-3 bg-white rounded-4 shadow-sm">
+            <audio controls class="w-100">
+              <source src="audio.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <figcaption class="mt-2 text-muted">
+              Figure 3: My Audio Message (sample)
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="py-5 bg-light" id="skills">
+    <div class="container">
+      <h2 class="section-title mb-4">Skill Progress</h2>
+
+      <div class="bg-white p-4 rounded-4 shadow-sm">
+
+        <h3 class="h6 fw-bold">HTML</h3>
+        <progress value="80" max="100">80%</progress>
+
+        <h3 class="h6 fw-bold mt-3">Java</h3>
+        <progress value="70" max="100">70%</progress>
+
+        <h3 class="h6 fw-bold mt-3">Python</h3>
+        <progress value="60" max="100">60%</progress>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TABLE SECTION -->
+  <section class="py-5" id="marks">
+    <div class="container">
+      <h2 class="section-title mb-4">Academic Marks</h2>
+
+      <div class="table-responsive shadow-sm rounded-4">
+        <table class="table table-striped table-hover mb-0">
+          <caption class="px-3 pt-3">Semester Marks Table</caption>
+          <thead class="table-dark">
+            <tr>
+              <th>Subject</th>
+              <th>Marks</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Data Structures</td>
+              <td>85</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>Operating Systems</td>
+              <td>78</td>
+              <td>B+</td>
+            </tr>
+            <tr>
+              <td>Database Management</td>
+              <td>88</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>Computer Networks</td>
+              <td>74</td>
+              <td>B</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="py-5 bg-light" id="contact">
+    <div class="container">
+      <h2 class="section-title mb-4">Contact Me</h2>
+
+      <form class="bg-white p-4 rounded-4 shadow-sm">
+
+        <div class="mb-3">
+          <label for="fullname" class="form-label fw-semibold">Full Name</label>
+          <input type="text" class="form-control" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label fw-semibold">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <fieldset class="border rounded-3 p-3 mb-3">
+          <legend class="float-none w-auto px-2 fw-semibold">Gender</legend>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="female" name="gender" value="female">
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="male" name="gender" value="male">
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="border rounded-3 p-3 mb-3">
+          <legend class="float-none w-auto px-2 fw-semibold">Interests</legend>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="webdev" name="interests" value="webdev">
+            <label class="form-check-label" for="webdev">Web Development</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cyber" name="interests" value="cyber">
+            <label class="form-check-label" for="cyber">Cybersecurity</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="ml" name="interests" value="ml">
+            <label class="form-check-label" for="ml">Machine Learning</label>
+          </div>
+        </fieldset>
+
+        <div class="mb-3">
+          <label for="contactmethod" class="form-label fw-semibold">Preferred Contact Method</label>
+          <select class="form-select" id="contactmethod" name="contactmethod">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="linkedin">LinkedIn</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 btn-hero">
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Fixed Back to Top Button (position: fixed concept) -->
+  <a href="#hero" class="back-top">↑</a>
+
+  <!-- FOOTER -->
+  <footer class="py-4 bg-dark text-white text-center">
+    <p class="mb-0">&copy; 2026 Dharanya. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS (for navbar toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

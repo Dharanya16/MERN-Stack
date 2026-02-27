@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Practice</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.5;
+    }
+
+    .box {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 18px;
+    }
+
+    .highlight {
+      background: yellow;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    .dark-mode {
+      background: #111;
+      color: white;
+    }
+
+    .card {
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      margin: 10px 0;
+    }
+
+    #cart .item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: 8px;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 10px;
+      width: fit-content;
+    }
+
+    #todo-list li {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 8px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: fit-content;
+    }
+
+    .swatch {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: inline-block;
+      cursor: pointer;
+      border: 2px solid #333;
+      margin-right: 8px;
+    }
+
+    #sortable li {
+      padding: 10px;
+      border: 1px solid #bbb;
+      border-radius: 10px;
+      margin: 8px 0;
+      cursor: grab;
+      background: #f8f8f8;
+      width: 220px;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal {
+      background: white;
+      padding: 20px;
+      width: 320px;
+      border-radius: 14px;
+    }
+
+    .modal h2 {
+      margin: 0 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="header-title">Original Title</h1>
+
+  <div class="box">
+    <h2>Easy 2 - Product Cards</h2>
+    <div class="product-card">Product 1</div>
+    <div class="product-card">Product 2</div>
+    <div class="product-card">Product 3</div>
+  </div>
+
+  <div class="box">
+    <h2>Easy 3 - Menu</h2>
+    <ul class="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Easy 4 - Controls</h2>
+    <div id="controls"></div>
+  </div>
+
+  <div class="box">
+    <h2>Medium 5 - Cart</h2>
+    <div id="cart"></div>
+  </div>
+
+  <div class="box">
+    <h2>Medium 6 - Avatar</h2>
+    < img class="avatar" src="https://via.placeholder.com/100" width="100" />
+    < img class="avatar" src="https://via.placeholder.com/100" width="100" />
+  </div>
+
+  <div class="box">
+    <h2>Medium 7 - Article</h2>
+    <div class="article-body">
+      <p>Direct child paragraph 1</p>
+      <p>Direct child paragraph 2</p>
+      <div>
+        <p>NOT direct child paragraph</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <h2>Medium 8 - Theme Toggle</h2>
+    <button id="theme-toggle">Toggle Theme</button>
+  </div>
+
+  <div class="box">
+    <h2>Medium 9 - Delete Card</h2>
+    <div class="card">
+      <p>This is card 1</p>
+      <button data-action="delete">Delete</button>
+    </div>
+
+    <div class="card">
+      <p>This is card 2</p>
+      <button data-action="delete">Delete</button>
+    </div>
+  </div>
+
+  <div class="box">
+    <h2>Medium-Hard 10 - Todo List</h2>
+    <input id="todo-input" type="text" placeholder="Enter task..." />
+    <button id="add-todo">Add</button>
+    <ul id="todo-list"></ul>
+  </div>
+
+  <div class="box">
+    <h2>Hard 11 - Event Delegation</h2>
+    <ul id="users-list">
+      <li data-user-id="101">John</li>
+      <li data-user-id="102">Mary</li>
+      <li data-user-id="103">Alex</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Hard 12 - Counter</h2>
+    <button id="minus">-1</button>
+    <span id="count">0</span>
+    <button id="plus">+1</button>
+  </div>
+
+  <div class="box">
+    <h2>Hard 13 - Live Search Filter</h2>
+    <input id="search" type="text" placeholder="Search country..." />
+    <ul id="countries">
+      <li class="country">India</li>
+      <li class="country">Canada</li>
+      <li class="country">Japan</li>
+      <li class="country">Germany</li>
+      <li class="country">France</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Hard 14 - Color Picker</h2>
+    < div class="swatch" data-color="#e74c3c" style="background:#e74c3c"></div>
+    < div class="swatch" data-color="#3498db" style="background:#3498db"></div>
+    < div class="swatch" data-color="#2ecc71" style="background:#2ecc71"></div>
+    < div class="swatch" data-color="#f1c40f" style="background:#f1c40f"></div>
+    < div class="swatch" data-color="#9b59b6" style="background:#9b59b6"></div>
+    < div class="swatch" data-color="#34495e" style="background:#34495e"></div>
+  </div>
+
+  <div class="box">
+    <h2>Hard 15 - Sortable List (Drag & Drop)</h2>
+    <ul id="sortable">
+      <li draggable="true">Item A</li>
+      <li draggable="true">Item B</li>
+      <li draggable="true">Item C</li>
+      <li draggable="true">Item D</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Hard 16 - Modal</h2>
+    <button id="open-modal">Open Modal</button>
+  </div>
+
+  <!-- LINK JS -->
+  <script src="Dom element.js"></script>
+</body>
+</html>

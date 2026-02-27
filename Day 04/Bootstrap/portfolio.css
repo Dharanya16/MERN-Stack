@@ -1,0 +1,181 @@
+/* Google Fonts (2 fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+
+body{
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  word-spacing: 2px;
+  letter-spacing: 0.2px;
+}
+
+/* Headings font */
+h1,h2,h3{
+  font-family: "Playfair Display", serif;
+}
+
+
+#hero{
+  background: linear-gradient(120deg, #0d6efd, #6f42c1);
+  color: white;
+}
+
+#projects{
+  position: static; /* static is default positioning */
+}
+
+
+.hero-section{
+  min-height: 70vh;
+  display: block; /* display: block demo */
+}
+
+.hero-title{
+  text-shadow: 0px 6px 20px rgba(0,0,0,0.35);
+  text-transform: capitalize;
+}
+
+.hero-text code{
+  display: inline; /* display: inline demo */
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.18);
+  color: white;
+}
+
+.btn-hero{
+  display: inline-block; /* display: inline-block demo */
+  border-radius: 14px;
+  padding: 12px 18px;
+  transition: 0.25s ease;
+}
+
+/* Hover, active pseudo classes */
+.btn-hero:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.btn-hero:active{
+  transform: scale(0.98);
+}
+
+/* Focus pseudo class + outline */
+.form-control:focus,
+.form-select:focus{
+  outline: 4px solid rgba(13,110,253,0.25);
+  box-shadow: none;
+  border-color: #0d6efd;
+}
+
+
+nav a{
+  text-decoration: none;
+}
+
+nav > .container{
+  position: relative; /* relative positioning demo */
+  top: 0;
+}
+
+
+.project-card{
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.08);
+  overflow: hidden; /* clean edges */
+  transition: 0.25s ease;
+}
+
+.project-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+/* nth-child pseudo-class demo */
+#projects .col-lg-3:nth-child(2) .project-card{
+  border: 2px dashed #6f42c1;
+}
+
+.section-title::before{
+  content: "★ ";
+  color: #0d6efd;
+}
+
+.section-title::after{
+  content: " ✔";
+  color: #198754;
+}
+
+/* first-letter pseudo-element */
+.details-box p::first-letter{
+  font-size: 28px;
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+
+.overflow-box{
+  height: 90px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid rgba(0,0,0,0.12);
+  background: white;
+  font-size: 14px;
+}
+
+.visible-box{ overflow: visible; }
+.hidden-box{ overflow: hidden; }
+.scroll-box{ overflow: scroll; }
+.auto-box{ overflow: auto; }
+
+/* Low specificity */
+p{ color: #1b1b1b; }
+
+/* Higher specificity wins */
+#hero p{ color: rgba(255,255,255,0.92); }
+
+/* Highest: !important once (teaching purpose) */
+#hero .hero-text{
+  color: white !important; /* !important used once to show priority */
+}
+
+
+
+progress{
+  width: 100%;
+  height: 18px;
+}
+
+.back-top{
+  position: fixed; /* fixed positioning demo */
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #0d6efd;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
+}
+
+.back-top:hover{
+  background: #6f42c1;
+  transform: translateY(-4px);
+}
+
+
+.hero-text{
+  text-align: left;
+  text-decoration: none;
+}
+
+@media (max-width: 768px){
+  .hero-title{
+    font-size: 2rem;
+  }
+}

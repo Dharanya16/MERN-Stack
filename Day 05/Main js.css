@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f4f6fb;
+  color: #111;
+}
+
+.app {
+  width: min(900px, 92%);
+  margin: 28px auto;
+}
+
+.header {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #444;
+}
+
+.card {
+  margin-top: 18px;
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+}
+
+ol {
+  line-height: 1.7;
+}

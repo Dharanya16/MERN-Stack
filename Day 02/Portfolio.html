@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dharanya | Personal Portfolio</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Dharanya</h1>
+    <p>
+      Hi! I am <b>Dharanya</b>, a <i>CSE Engineering student</i>.
+      I love learning technology and building projects.
+    </p>
+
+    <p>
+      I am <u>consistent</u>, sometimes I do <s>procrastinate</s>, but I always try to improve.
+      I believe in <sup>hard work</sup> and <sub>smart learning</sub>.
+      My favorite command is <code>git status</code>.
+    </p>
+  </header>
+
+  <nav>
+    <h2>Navigation</h2>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#article">My Article</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#progress">Skill Progress</a></li>
+      <li><a href="#marks">Academic Marks</a></li>
+      <li><a href="#contact">Contact Form</a></li>
+      <li><a href="#footer">Footer</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am currently studying Computer Science Engineering (3rd year).
+        My goal is to become a full-stack developer and work in a good company.
+        I enjoy coding, problem solving, and learning new things daily.
+      </p>
+
+      <p>
+        Profile Link:
+        < a href="https://www.linkedin.com" target="_blank">Visit my LinkedIn</a>
+      </p>
+
+      <details>
+        <summary>Click here to know more about me</summary>
+        <p>
+          I am interested in Web Development, Cybersecurity, and Machine Learning.
+          I also like improving communication skills and aptitude.
+        </p>
+      </details>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>
+        Below are some of my technical and personal skills.
+      </p>
+    </section>
+
+    <section id="lists">
+      <h2>My Lists</h2>
+
+      <h3>Technical Skills (Ordered List)</h3>
+      <ol>
+        <li>HTML</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>SQL</li>
+      </ol>
+
+      <h3>Hobbies (Unordered List)</h3>
+      <ul>
+        <li>Listening to music</li>
+        <li>Watching tech videos</li>
+        <li>Learning new skills</li>
+        <li>Making notes</li>
+      </ul>
+    </section>
+
+    <section id="article">
+      <h2>Article Section</h2>
+
+      <article>
+        <h3>My Learning Journey</h3>
+        <p>
+          I started learning programming with basic C and Java.
+          Later, I became interested in web development and started learning HTML.
+          Now I am exploring full stack development and cybersecurity projects.
+        </p>
+      </article>
+    </section>
+
+    <section id="media">
+      <h2>Media Section</h2>
+
+      <figure>
+        <img src="profile.jpg" alt="A sample profile image of Dharanya" width="250">
+        <figcaption>Figure 1: My Profile Image (sample)</figcaption>
+      </figure>
+
+      <figure>
+        <video controls width="300">
+          <source src="intro.mp4" type="video/mp4">
+          Your browser does not support the video tag. Please try another browser.
+        </video>
+        <figcaption>Figure 2: My Introduction Video (sample)</figcaption>
+      </figure>
+
+      <figure>
+        <audio controls>
+          <source src="audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <figcaption>Figure 3: My Audio Message (sample)</figcaption>
+      </figure>
+
+      <p>
+        Note: You can replace <b>profile.jpg</b>, <b>intro.mp4</b>, and <b>audio.mp3</b> with your own files.
+      </p>
+    </section>
+
+    <section id="progress">
+      <h2>Skill Progress</h2>
+
+      <h3>HTML</h3>
+      <progress value="80" max="100">80%</progress>
+
+      <h3>Java</h3>
+      <progress value="70" max="100">70%</progress>
+
+      <h3>Python</h3>
+      <progress value="60" max="100">60%</progress>
+    </section>
+
+    <section id="marks">
+      <h2>Academic Marks</h2>
+
+      <table border="1">
+        <caption>Semester Marks Table</caption>
+
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Data Structures</td>
+            <td>85</td>
+            <td>A</td>
+          </tr>
+
+          <tr>
+            <td>Operating Systems</td>
+            <td>78</td>
+            <td>B+</td>
+          </tr>
+
+          <tr>
+            <td>Database Management</td>
+            <td>88</td>
+            <td>A</td>
+          </tr>
+
+          <tr>
+            <td>Computer Networks</td>
+            <td>74</td>
+            <td>B</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Basic Information</legend>
+
+          <p>
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" required>
+          </p>
+
+          <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Gender</legend>
+
+          <p>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+          </p>
+
+          <p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Interests</legend>
+
+          <p>
+            <input type="checkbox" id="webdev" name="interests" value="webdev">
+            <label for="webdev">Web Development</label>
+          </p>
+
+          <p>
+            <input type="checkbox" id="cyber" name="interests" value="cyber">
+            <label for="cyber">Cybersecurity</label>
+          </p>
+
+          <p>
+            <input type="checkbox" id="ml" name="interests" value="ml">
+            <label for="ml">Machine Learning</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferred Contact Method</legend>
+
+          <label for="contactmethod">Choose one:</label><br>
+          <select id="contactmethod" name="contactmethod">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="linkedin">LinkedIn</option>
+          </select>
+        </fieldset>
+
+        <p>
+          <button type="submit">Submit</button>
+        </p>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <h2>Footer</h2>
+    <p>&copy; 2026 Dharanya. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

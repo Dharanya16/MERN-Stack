@@ -1,0 +1,540 @@
+/* ================================
+   Google Fonts (2 fonts)
+   Headings: Poppins
+   Body: Inter
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+/* ================================
+   Root Colors
+================================ */
+:root{
+  --bg: #0b1020;
+  --card: rgba(255,255,255,0.06);
+  --glass: rgba(255,255,255,0.08);
+  --border: rgba(255,255,255,0.12);
+  --text: #eaf2ff;
+  --muted: #b7c3d8;
+  --accent: #6ee7ff;
+  --accent2: #a78bfa;
+  --danger: #ff5a7a;
+  --radius: 18px;
+}
+
+/* ================================
+   Element selectors
+================================ */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Inter", system-ui, Arial, sans-serif;
+  background: radial-gradient(1000px 500px at 10% 0%, rgba(167,139,250,0.25), transparent 60%),
+              radial-gradient(900px 500px at 90% 20%, rgba(110,231,255,0.22), transparent 55%),
+              linear-gradient(180deg, #070a14, var(--bg));
+  color: var(--text);
+  line-height: 1.7; /* Typography */
+  letter-spacing: 0.2px; /* Typography */
+  word-spacing: 1px; /* Typography */
+  padding: 28px;
+}
+
+/* Headings use second font */
+h1,h2,h3,h4,h5,h6{
+  font-family: "Poppins", system-ui, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+p{
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* ================================
+   Header (Hero vibe)
+================================ */
+header{
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+  position: relative; /* Positioning: relative */
+  overflow: hidden;
+}
+
+/* Pseudo-elements: before/after */
+header::before{
+  content: "";
+  position: absolute;
+  inset: -120px;
+  background: radial-gradient(circle, rgba(110,231,255,0.22), transparent 55%);
+  transform: rotate(8deg);
+  pointer-events: none;
+}
+
+header::after{
+  content: "";
+  position: absolute;
+  right: -70px;
+  top: -70px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(167,139,250,0.22), transparent 65%);
+  pointer-events: none;
+}
+
+header h1{
+  font-size: 42px;
+  color: var(--accent);
+  text-transform: uppercase; /* Typography */
+  text-shadow: 0 10px 35px rgba(110,231,255,0.25); /* Typography */
+  margin-bottom: 8px;
+  position: relative;
+}
+
+header p{
+  margin-top: 10px;
+  max-width: 850px;
+  position: relative;
+}
+
+/* Pseudo-element: first-letter */
+header p::first-letter{
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent2);
+}
+
+/* Inline code styling */
+code{
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2px 8px;
+  border-radius: 8px;
+  color: var(--accent);
+  display: inline; /* Display: inline */
+}
+
+/* ================================
+   NAV (Sticky + Flexbox)
+================================ */
+nav{
+  margin-top: 18px;
+  background: rgba(10,14,30,0.7);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+
+  position: sticky; /* Positioning: sticky */
+  top: 14px;
+  z-index: 999;
+
+  backdrop-filter: blur(12px);
+}
+
+/* Descendant combinator */
+nav h2{
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Flexbox #1 (nav bar) */
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Child combinator */
+nav > ul > li{
+  display: inline-block; /* Display: inline-block */
+}
+
+nav a{
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  transition: 0.25s ease;
+}
+
+/* Pseudo-class: hover */
+nav a:hover{
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, rgba(110,231,255,0.18), rgba(167,139,250,0.16));
+  border-color: rgba(110,231,255,0.3);
+}
+
+/* Pseudo-class: active */
+nav a:active{
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Pseudo-class: focus (outline visible) */
+nav a:focus{
+  outline: 3px solid rgba(110,231,255,0.35);
+  outline-offset: 2px;
+}
+
+/* ================================
+   Main layout
+================================ */
+main{
+  margin-top: 18px;
+  display: block; /* Display: block */
+}
+
+section{
+  margin-top: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+/* ID selector example */
+#about{
+  border-left: 4px solid rgba(110,231,255,0.55);
+}
+
+/* Class selector example (will apply if you add class="highlight") */
+.highlight{
+  color: var(--accent2);
+  text-decoration: underline wavy rgba(167,139,250,0.6);
+}
+
+/* ================================
+   Specificity demo
+   (You will see which one wins)
+================================ */
+
+/* Element selector */
+h2{
+  color: var(--accent);
+}
+
+/* ID selector wins over element selector */
+#marks h2{
+  color: var(--accent2);
+}
+
+/* This is just for teaching purpose:
+   It will override even ID selector. */
+section h2{
+  color: var(--accent) !important; /* use !important once */
+}
+
+/* ================================
+   Lists
+================================ */
+ol, ul{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+li{
+  margin: 6px 0;
+}
+
+/* nth-child pseudo-class */
+ol li:nth-child(2){
+  color: var(--accent2);
+}
+
+ul li:nth-child(3){
+  color: var(--accent);
+}
+
+/* ================================
+   Details + Summary
+================================ */
+details{
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+}
+
+summary{
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--accent2);
+  text-decoration: underline;
+}
+
+summary:hover{
+  color: var(--accent);
+}
+
+/* ================================
+   Article
+================================ */
+article{
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.2);
+  position: static; /* Positioning: static (default) */
+}
+
+/* ================================
+   Media section
+================================ */
+figure{
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+}
+
+img, video, audio{
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  display: block;
+  object-fit: cover;
+}
+
+figcaption{
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ================================
+   Progress bars
+================================ */
+progress{
+  width: 100%;
+  height: 18px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.06);
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+/* ================================
+   Table
+================================ */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+caption{
+  caption-side: top;
+  text-align: left;
+  margin-bottom: 10px;
+  color: var(--muted);
+  text-decoration: underline; /* Typography */
+}
+
+th, td{
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align: left; /* Typography */
+}
+
+th{
+  color: var(--accent);
+  text-transform: uppercase; /* Typography */
+  letter-spacing: 1px;
+  background: rgba(255,255,255,0.04);
+}
+
+/* Hover effect on table rows */
+tbody tr:hover{
+  background: rgba(110,231,255,0.08);
+}
+
+/* ================================
+   Form styling (Box model + focus)
+================================ */
+form{
+  margin-top: 10px;
+}
+
+fieldset{
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 14px;
+  background: rgba(255,255,255,0.02);
+}
+
+legend{
+  padding: 0 10px;
+  color: var(--accent2);
+  font-weight: 700;
+}
+
+label{
+  display: inline-block;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+input[type="text"],
+input[type="email"],
+select{
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.25);
+  color: var(--text);
+  outline: none;
+  transition: 0.25s ease;
+}
+
+/* Focus pseudo-class + outline */
+input:focus,
+select:focus{
+  border-color: rgba(110,231,255,0.55);
+  outline: 4px solid rgba(110,231,255,0.16);
+}
+
+/* ================================
+   Buttons
+================================ */
+button{
+  margin-top: 10px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  background: linear-gradient(90deg, rgba(110,231,255,1), rgba(167,139,250,1));
+  color: #0a0f1f;
+  transition: 0.25s ease;
+}
+
+/* Hover pseudo-class */
+button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+/* Active pseudo-class */
+button:active{
+  transform: translateY(0px) scale(0.98);
+}
+
+/* ================================
+   Back-to-top (fixed positioning)
+   NOTE: Your HTML has <a href="#top">Go to Top</a>
+   We'll style that link as a floating button.
+================================ */
+
+/* Descendant selector */
+main p a[href="#top"]{
+  position: fixed; /* Positioning: fixed */
+  right: 18px;
+  bottom: 18px;
+  z-index: 999;
+
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  text-decoration: none;
+  color: var(--text);
+  backdrop-filter: blur(12px);
+  transition: 0.25s ease;
+}
+
+main p a[href="#top"]:hover{
+  background: rgba(110,231,255,0.16);
+  border-color: rgba(110,231,255,0.35);
+  transform: translateY(-2px);
+}
+
+/* ================================
+   Footer
+================================ */
+footer{
+  margin-top: 18px;
+  text-align: center;
+  color: var(--muted);
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+}
+
+/* ================================
+   OVERFLOW DEMO
+   (Requirement says show all 4)
+   But your HTML doesn't have boxes.
+   If you add 4 divs with class overflow-box
+   and extra classes visible/hidden/scroll/auto
+   it will work.
+================================ */
+
+.overflow-box{
+  width: 100%;
+  max-width: 360px;
+  height: 90px;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.25);
+  margin-top: 12px;
+}
+
+.overflow-visible{ overflow: visible; }
+.overflow-hidden{ overflow: hidden; }
+.overflow-scroll{ overflow: scroll; }
+.overflow-auto{ overflow: auto; }
+
+/* ================================
+   Responsive Media Query
+================================ */
+@media (max-width: 768px){
+
+  body{
+    padding: 16px;
+  }
+
+  header h1{
+    font-size: 30px;
+  }
+
+  /* Flexbox direction change */
+  nav ul{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav a{
+    width: 100%;
+    text-align: center;
+  }
+}

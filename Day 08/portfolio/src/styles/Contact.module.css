@@ -1,0 +1,57 @@
+.contactSection {
+  padding: 100px 20px 40px;
+}
+
+.contactContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3.5rem;
+  border-radius: 20px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.contactForm textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.submitBtn {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 80px 20px 40px;
+  }
+
+  .contactForm {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,51 @@
+.projectsSection {
+  padding: 100px 20px 40px;
+}
+
+.projectsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.projectCard {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.projectCard h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.projectCard:hover h3 {
+  color: var(--primary);
+}
+
+.projectCard p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .projectsSection {
+    padding: 80px 20px 40px;
+  }
+
+  .projectsGrid {
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Chicken Biryani",
+    "image": "https://www.willflyforfood.net/wp-content/uploads/2022/11/pakistani-food-biryani.jpg",
+    "description": "Fragrant basmati rice cooked with tender chicken and aromatic spices - a royal Indian delicacy",
+    "difficulty": "Medium",
+    "prepTime": "45 mins",
+    "servings": "4 people",
+    "rating": 5,
+    "ingredients": ["2 cups basmati rice", "500g chicken", "2 onions", "4 tomatoes", "Ginger-garlic paste", "Yogurt", "Biryani masala", "Ghee", "Salt to taste"],
+    "instructions": "Soak rice for 30 mins. Marinate chicken with yogurt and spices for 1 hour. Layer rice and chicken in a pot, seal with dough and cook on high heat for 2-3 minutes, then low heat for 45 minutes. Serve hot with raita and pickles."
+  },
+  {
+    "id": 2,
+    "title": "Masala Dosa",
+    "image": "https://vismaifood.com/storage/app/uploads/public/45a/29b/a17/thumb__700_0_0_0_auto.jpg",
+    "description": "Crispy South Indian crepe filled with seasoned potatoes and served with sambar and chutney",
+    "difficulty": "Easy",
+    "prepTime": "30 mins",
+    "servings": "2 people",
+    "rating": 4,
+    "ingredients": ["2 cups dosa batter", "4 potatoes", "2 onions", "Green chilies", "Curry leaves", "Mustard seeds", "Turmeric powder", "Oil", "Salt"],
+    "instructions": "Prepare potato masala by frying boiled and mashed potatoes with onions and spices. Heat a non-stick pan, spread dosa batter evenly, add oil, then flip. Add potato masala and serve folded with sambar and chutney."
+  },
+  {
+    "id": 3,
+    "title": "Chocolate Cake",
+    "image": "https://assets.winni.in/c_limit,dpr_1,fl_progressive,q_80,w_1000/83221_yummylicious-chocolate-cake.jpeg",
+    "description": "Rich, moist chocolate cake with a decadent cocoa flavor - perfect for any celebration",
+    "difficulty": "Easy",
+    "prepTime": "50 mins",
+    "servings": "8 people",
+    "rating": 5,
+    "ingredients": ["2 cups flour", "3/4 cup cocoa powder", "2 cups sugar", "3 eggs", "1 cup milk", "1/2 cup oil", "2 tsp baking powder", "1 tsp vanilla extract", "Pinch of salt"],
+    "instructions": "Preheat oven to 180°C. Cream sugar and eggs together. Mix dry ingredients separately. Alternate adding dry mix and milk to egg mixture. Pour into greased pan and bake for 35-40 minutes until a toothpick comes out clean."
+  },
+  {
+    "id": 4,
+    "title": "Margherita Pizza",
+    "image": "https://cookingitalians.com/wp-content/uploads/2024/11/Margherita-Pizza.jpg",
+    "description": "Classic Italian pizza with fresh tomatoes, mozzarella, and basil on a crispy crust",
+    "difficulty": "Medium",
+    "prepTime": "40 mins",
+    "servings": "2 people",
+    "rating": 5,
+    "ingredients": ["Pizza dough", "250g mozzarella", "3 tomatoes", "Fresh basil", "Olive oil", "Salt", "Black pepper", "Garlic"],
+    "instructions": "Roll pizza dough to desired thickness. Spread tomato sauce, add mozzarella chunks. Bake at 220°C for 15-20 minutes. Top with fresh basil and serve hot."
+  },
+  {
+    "id": 5,
+    "title": "Spaghetti Carbonara",
+    "image": "https://www.allrecipes.com/thmb/Vg2cRidr2zcYhWGvPD8M18xM_WY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg",
+    "description": "Creamy Roman pasta with bacon, eggs, and parmesan - simple yet absolutely delicious",
+    "difficulty": "Easy",
+    "prepTime": "25 mins",
+    "servings": "2 people",
+    "rating": 4,
+    "ingredients": ["400g spaghetti", "200g bacon", "3 egg yolks", "100g parmesan cheese", "Black pepper", "Salt"],
+    "instructions": "Cook spaghetti until al dente. Fry bacon until crispy. Mix egg yolks with parmesan. Toss hot pasta with bacon fat, then add eggs quickly while pasta is hot for creamy sauce."
+  },
+  {
+    "id": 6,
+    "title": "Butter Chicken",
+    "image": "https://as1.ftcdn.net/v2/jpg/06/01/41/66/1000_F_601416673_Tn9dqtXuujNiavuJnNNspgcDezsStYpD.jpg",
+    "description": "Tender chicken in a rich, creamy tomato-based sauce with aromatic Indian spices",
+    "difficulty": "Medium",
+    "prepTime": "50 mins",
+    "servings": "4 people",
+    "rating": 5,
+    "ingredients": ["600g chicken", "2 tbsp butter", "1 cup cream", "400g tomato puree", "Ginger-garlic paste", "Spices", "Yogurt", "Lemon juice"],
+    "instructions": "Marinate chicken in yogurt and spices for 2 hours. Grill chicken. Prepare sauce with tomatoes, spices, and cream. Add cooked chicken and simmer. Finish with butter and lemon juice."
+  }
+]
